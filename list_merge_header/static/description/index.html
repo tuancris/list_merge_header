@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List View Merge Header — Excel-like Merged Column Headers for Odoo 19</title>
+</head>
+
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #212529; line-height: 1.6; background: #fff;">
+
+    <div style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+
+        <!-- Hero Section -->
+        <div style="background-color: #714B67; border-radius: 20px; padding: 50px 30px; text-align: center; margin-bottom: 40px;">
+            <div style="display: inline-block; background-color: #8F6B84; color: #fff; padding: 10px 25px; border-radius: 30px; font-size: 12px; font-weight: 600; letter-spacing: 2px; margin-bottom: 20px;">
+                LIST VIEW ENHANCEMENT FOR ODOO 19
+            </div>
+            <h1 style="color: #fff; font-size: 42px; font-weight: 800; margin: 0 0 20px;">List View Merge Header</h1>
+            <p style="color: #fff; font-size: 18px; max-width: 750px; margin: 0 auto 30px; line-height: 1.6;">
+                Add <strong>Excel-like merged column headers</strong> to any Odoo 19 list/tree view.
+                Group related columns under a shared label using a simple <code style="background-color: #8F6B84; padding: 2px 8px; border-radius: 4px;">&lt;merge&gt;</code> XML tag —
+                <strong>no JavaScript configuration, no Python hacks</strong>, just clean XML.
+            </p>
+            <div style="text-align: center;">
+                <span style="display: inline-block; background-color: #8F6B84; color: #fff; padding: 10px 20px; border-radius: 25px; font-weight: 500; margin: 5px;">
+                    &lt;merge&gt; XML Tag</span>
+                <span style="display: inline-block; background-color: #8F6B84; color: #fff; padding: 10px 20px; border-radius: 25px; font-weight: 500; margin: 5px;">
+                    Two-Row Header</span>
+                <span style="display: inline-block; background-color: #8F6B84; color: #fff; padding: 10px 20px; border-radius: 25px; font-weight: 500; margin: 5px;">
+                    Zero Config</span>
+                <span style="display: inline-block; background-color: #8F6B84; color: #fff; padding: 10px 20px; border-radius: 25px; font-weight: 500; margin: 5px;">
+                    OWL Powered</span>
+            </div>
+        </div>
+
+        <!-- Edition Badges -->
+        <div style="text-align: center; margin-bottom: 50px;">
+            <span style="display: inline-block; background-color: #017E84; color: #fff; padding: 12px 28px; border-radius: 30px; font-size: 14px; font-weight: 600; margin: 5px;">Community</span>
+            <span style="display: inline-block; background-color: #714B67; color: #fff; padding: 12px 28px; border-radius: 30px; font-size: 14px; font-weight: 600; margin: 5px;">Enterprise</span>
+            <span style="display: inline-block; background-color: #7C7BAD; color: #fff; padding: 12px 28px; border-radius: 30px; font-size: 14px; font-weight: 600; margin: 5px;">Odoo.sh</span>
+        </div>
+
+        <!-- Key Features -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 32px; font-weight: 700; margin: 0 0 12px;">Key <span style="color: #714B67;">Features</span></h2>
+            <p style="color: #6c757d; font-size: 16px; max-width: 700px; margin: 0 auto;">Everything you need to display professional merged column headers in Odoo list views, out of the box.</p>
+        </div>
+
+        <table style="width: 100%; border-collapse: separate; border-spacing: 15px; margin-bottom: 40px;">
+            <tr>
+                <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#127991;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">&lt;merge&gt; XML Tag</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Wrap any group of &lt;field&gt; tags inside a &lt;merge string="Label"&gt; node.
+                        That is all — the module does the rest automatically.
+                    </p>
+                </td>
+                <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#128202;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">Two-Row Header Layout</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Automatically renders a two-row &lt;thead&gt;: Row 1 shows the group label spanning all merged columns,
+                        Row 2 shows individual field headers — identical to Excel merged cells.
+                    </p>
+                </td>
+                <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#9889;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">OWL Patch — Zero Overhead</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Uses Odoo 19's OWL patch() API to extend ListArchParser and ListRenderer.
+                        Views without &lt;merge&gt; tags render the original single-row header unchanged.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#128256;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">Mixed Columns Support</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Mix merged and non-merged columns freely in the same list view. Non-merged columns automatically get
+                        rowspan="2" so they align perfectly with the two-row layout.
+                    </p>
+                </td>
+                <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#9989;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">RNG Validation Patched</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Patches Odoo's internal RNG schema validator so &lt;merge&gt; tags are accepted without any
+                        validation error on module install or view save.
+                    </p>
+                </td>
+                <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#128259;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">Sort &amp; Resize Preserved</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Column sorting, column resizing, optional columns dropdown, and record selector checkbox all
+                        continue to work exactly as in the stock Odoo list view — no regressions.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Screenshot Section -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 32px; font-weight: 700; margin: 0 0 12px;">See It <span style="color: #714B67;">In Action</span></h2>
+            <p style="color: #6c757d; font-size: 16px;">Real screenshot from a live Odoo 19 instance.</p>
+        </div>
+
+        <!-- Screenshot 1 -->
+        <div style="margin-bottom: 50px; text-align: center;">
+            <div style="display: inline-block; width: 45px; height: 45px; background-color: #714B67; color: #fff; border-radius: 50%; font-size: 18px; font-weight: 700; line-height: 45px; margin-bottom: 15px;">1</div>
+            <h4 style="font-weight: 700; font-size: 24px; margin: 0 0 10px;">
+                Merged Headers <span style="color: #714B67;">In a List View</span>
+            </h4>
+            <p style="color: #6c757d; max-width: 650px; margin: 0 auto 20px; font-size: 15px;">
+                Columns are grouped under a shared merge label in the first header row. Non-merged columns
+                span both rows automatically with <strong>rowspan="2"</strong>. Individual field headers with
+                full sort functionality appear in the second row.
+            </p>
+            <div style="background-color: #f8f9fa; border-radius: 12px; padding: 15px; border: 1px solid #e9ecef;">
+                <img src="./assets/screenshots/1.png" alt="List view with merged column group headers and two-row layout"
+                    style="max-width: 100%; height: auto; border-radius: 8px;" />
+            </div>
+        </div>
+
+        <!-- How to Use Section -->
+        <div style="background-color: #f8f9fa; border-radius: 20px; padding: 40px; margin-bottom: 50px; border: 1px solid #e9ecef;">
+            <h3 style="font-weight: 700; font-size: 28px; margin: 0 0 20px; text-align: center;">
+                How to <span style="color: #714B67;">Use It</span>
+            </h3>
+            <p style="color: #6c757d; font-size: 15px; text-align: center; margin: 0 0 20px;">
+                Simply wrap the columns you want to group inside a &lt;merge string="Your Label"&gt; tag in your list/tree view XML:
+            </p>
+            <pre style="background:#2d2d2d; color:#f8f8f2; padding:20px; border-radius:8px; font-size:13px; overflow-x: auto; margin: 0 0 20px;">&lt;list string="My Records"&gt;
+    &lt;field name="name"/&gt;
+    &lt;field name="user_id"/&gt;
+
+    &lt;!-- Group date columns under a shared label --&gt;
+    &lt;merge string="Dates"&gt;
+        &lt;field name="date_start"/&gt;
+        &lt;field name="date_deadline"/&gt;
+        &lt;field name="date_end"/&gt;
+    &lt;/merge&gt;
+
+    &lt;!-- Another merge group --&gt;
+    &lt;merge string="Financials"&gt;
+        &lt;field name="amount_untaxed"/&gt;
+        &lt;field name="amount_tax"/&gt;
+        &lt;field name="amount_total"/&gt;
+    &lt;/merge&gt;
+
+    &lt;field name="state"/&gt;
+&lt;/list&gt;</pre>
+            <p style="color: #6c757d; font-size: 14px; text-align: center; margin: 0;">
+                The <strong>string</strong> attribute on &lt;merge&gt; is the label shown in the first header row.
+                You can have <strong>multiple</strong> &lt;merge&gt; groups in the same list view.
+                Views <strong>without</strong> any &lt;merge&gt; tags behave exactly as before — no performance impact.
+            </p>
+        </div>
+
+        <!-- Technical Architecture -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 32px; font-weight: 700; margin: 0 0 12px;">Technical <span style="color: #714B67;">Architecture</span></h2>
+            <p style="color: #6c757d; font-size: 16px; max-width: 700px; margin: 0 auto;">Clean, minimal implementation following Odoo 19 best practices.</p>
+        </div>
+
+        <table style="width: 100%; border-collapse: separate; border-spacing: 15px; margin-bottom: 50px;">
+            <tr>
+                <td style="width: 50%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#129513;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">ListArchParser Patch</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Pre-scans the XML arch for &lt;merge&gt; nodes to build a mergeInfo map (fieldName to groupId + label).
+                        After the original parser runs, each column object is annotated with its mergeGroup metadata.
+                    </p>
+                </td>
+                <td style="width: 50%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#128444;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">ListRenderer Patch</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Adds hasMergeHeaders, getMergeGroups(), and mergeSubColumns getters consumed by the OWL template
+                        to build the two-row &lt;thead&gt;. Adjacent columns with the same groupId are collapsed into a
+                        single colspan cell.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#128196;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">OWL Template Extension</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Inherits and replaces the &lt;thead&gt; of web.ListRenderer using t-inherit-mode="extension".
+                        When no merge groups exist, it falls back to the original single-row rendering —
+                        no visual change for standard views.
+                    </p>
+                </td>
+                <td style="width: 50%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
+                    <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">&#128737;</div>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">Python RNG Validator Patch</h5>
+                    <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
+                        Extends ir.ui.view to register a _validate_tag_merge handler and patches Odoo's internal
+                        schema_valid validator to unwrap &lt;merge&gt; nodes before validation — ensuring clean installs
+                        with no schema errors.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Comparison Table -->
+        <div style="background-color: #1a1d21; border-radius: 20px; padding: 40px; margin-bottom: 50px;">
+            <h3 style="color: #fff; text-align: center; font-size: 28px; font-weight: 700; margin: 0 0 30px;">
+                List View Merge Header vs Standard Odoo List
+            </h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: left;">Feature</th>
+                        <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: center; width: 160px;">With This Module</th>
+                        <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: center; width: 160px;">Stock Odoo 19</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef; border-bottom: 1px solid #2d3136;">Merged column group headers (Excel-style)</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #FF5252; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef; border-bottom: 1px solid #2d3136;">Pure XML configuration — no custom Python or JS per view</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #FF5252; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef; border-bottom: 1px solid #2d3136;">Multiple merge groups in the same view</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #FF5252; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef; border-bottom: 1px solid #2d3136;">Mix merged and non-merged columns freely</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #FF5252; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef; border-bottom: 1px solid #2d3136;">Column sorting preserved in merged columns</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef; border-bottom: 1px solid #2d3136;">Optional columns dropdown preserved</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #00E676; border-bottom: 1px solid #2d3136; text-align: center; font-size: 18px;">&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 16px; color: #e9ecef;">RNG schema validation compatible (no install error)</td>
+                        <td style="padding: 14px 16px; color: #00E676; text-align: center; font-size: 18px;">&#10003;</td>
+                        <td style="padding: 14px 16px; color: #FF5252; text-align: center; font-size: 18px;">&#10007;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FAQ -->
+        <div style="margin-bottom: 45px;">
+            <h3 style="font-size: 26px; font-weight: 700; text-align: center; margin: 0 0 25px;">
+                Frequently Asked <span style="color: #714B67;">Questions</span>
+            </h3>
+            <table style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
+                <tr>
+                    <td style="background-color: #F8F9FA; border-left: 4px solid #714B67; padding: 20px; border-radius: 0 8px 8px 0; vertical-align: top;">
+                        <strong style="color: #714B67; font-size: 16px; display: block; margin-bottom: 8px;">
+                            Does this affect views that do not use &lt;merge&gt;?
+                        </strong>
+                        <span style="color: #495057; font-size: 14px; line-height: 1.5; display: block;">
+                            No. The OWL template checks hasMergeHeaders before rendering the two-row layout.
+                            If the view has no &lt;merge&gt; tags, the original single-row header is rendered exactly as in
+                            stock Odoo — zero overhead.
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #F8F9FA; border-left: 4px solid #714B67; padding: 20px; border-radius: 0 8px 8px 0; vertical-align: top;">
+                        <strong style="color: #714B67; font-size: 16px; display: block; margin-bottom: 8px;">
+                            Can I have more than one &lt;merge&gt; group in the same list view?
+                        </strong>
+                        <span style="color: #495057; font-size: 14px; line-height: 1.5; display: block;">
+                            Yes. Each &lt;merge&gt; node gets its own unique group ID. You can place multiple merge groups
+                            anywhere in the column list and freely mix them with regular non-merged columns.
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #F8F9FA; border-left: 4px solid #714B67; padding: 20px; border-radius: 0 8px 8px 0; vertical-align: top;">
+                        <strong style="color: #714B67; font-size: 16px; display: block; margin-bottom: 8px;">
+                            Will Odoo throw a validation error when I save a view with &lt;merge&gt;?
+                        </strong>
+                        <span style="color: #495057; font-size: 14px; line-height: 1.5; display: block;">
+                            No. The module patches both Odoo's RNG schema validator (Python-side) and registers a
+                            _validate_tag_merge handler on ir.ui.view. The &lt;merge&gt; tag is fully accepted without
+                            any error during module installation or view editing.
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #F8F9FA; border-left: 4px solid #714B67; padding: 20px; border-radius: 0 8px 8px 0; vertical-align: top;">
+                        <strong style="color: #714B67; font-size: 16px; display: block; margin-bottom: 8px;">
+                            Does column sorting still work inside a merged group?
+                        </strong>
+                        <span style="color: #495057; font-size: 14px; line-height: 1.5; display: block;">
+                            Yes. Each individual field header in the second row retains full click-to-sort behaviour.
+                            The sort arrow and column resize handle are rendered on the second-row &lt;th&gt; elements,
+                            exactly as they would be in a regular single-row header.
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #F8F9FA; border-left: 4px solid #714B67; padding: 20px; border-radius: 0 8px 8px 0; vertical-align: top;">
+                        <strong style="color: #714B67; font-size: 16px; display: block; margin-bottom: 8px;">
+                            Does it require any Python dependencies?
+                        </strong>
+                        <span style="color: #495057; font-size: 14px; line-height: 1.5; display: block;">
+                            No external packages needed. The module depends only on the built-in web module
+                            and uses lxml (already part of Odoo's standard environment) for the RNG validator patch.
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Support Section -->
+        <div style="background-color: #714B67; border-radius: 20px; padding: 40px; text-align: center; margin-bottom: 40px;">
+            <h3 style="color: #fff; font-weight: 700; font-size: 26px; margin: 0 0 12px;">Need Help?</h3>
+            <p style="color: #ddd; margin: 0 0 20px; font-size: 15px;">Full support included. Bug reports, feature requests, or custom integration questions — just reach out!</p>
+            <a href="mailto:nguyentuann1004@gmail.com" style="display: inline-block; background-color: #fff; color: #714B67; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 15px;">
+                nguyentuann1004@gmail.com</a>
+        </div>
+
+        <!-- Version Footer -->
+        <div style="text-align: center; padding: 20px 0;">
+            <p style="color: #6c757d; margin: 0 0 5px; font-size: 13px;">
+                <strong style="color: #212529;">Version:</strong> 19.0.1.0.0 |
+                <strong style="color: #212529;">License:</strong> LGPL-3 |
+                <strong style="color: #212529;">Author:</strong> Tuan Nguyen Van
+            </p>
+            <p style="color: #adb5bd; font-size: 12px; margin: 0;">
+                Compatible with Odoo 19 Community, Enterprise, and Odoo.sh
+            </p>
+            <p style="color: #adb5bd; font-size: 12px; margin: 4px 0 0;">
+                &copy; 2026 Tuan Nguyen Van. All rights reserved.
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
