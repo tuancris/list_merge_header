@@ -1,41 +1,7 @@
-// Part of list_merge_header. See LICENSE file for full copyright and licensing details.
-
-.o_list_table {
-    thead {
-        // Style for the top row (group headers)
-        tr.o_merge_header_top {
-            th.o_merge_group_header {
-                text-align: center !important;
-                border-bottom: 1px solid var(--border-color, #dee2e6);
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
-                background-color: var(--table-bg, #ffffff);
-            }
-        }
-
-        // Style for the second row (sub-headers)
-        tr.o_merge_header_sub {
-            th {
-                border-top: none;
-                background-color: var(--table-bg, #ffffff);
-            }
-        }
-    }
+.o_list_table .o_merge_header_top td {
+    background-color: var(--o-view-background-color, var(--bs-body-bg));
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--bs-border-color);
 }
-
-// Dark mode compatibility
-[data-bs-theme="dark"] .o_list_table {
-    thead {
-        tr.o_merge_header_top {
-            th.o_merge_group_header {
-                border-bottom-color: var(--border-color, #495057);
-                background-color: var(--table-bg, #212529);
-            }
-        }
-        tr.o_merge_header_sub {
-            th {
-                background-color: var(--table-bg, #212529);
-            }
-        }
-    }
-}
+.o_list_table .o_merge_group_header { font-weight: 600; }

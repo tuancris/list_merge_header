@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List View Merge Header — Excel-like Merged Column Headers for Odoo 19</title>
+    <title>List View Merge Header — Excel-like Merged Column Headers for Odoo 20</title>
 </head>
 
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #212529; line-height: 1.6; background-color: #FFFFFF;">
@@ -14,11 +14,11 @@
         <!-- Hero Section -->
         <div style="background-color: #714B67; border-radius: 20px; padding: 50px 30px; text-align: center; margin-bottom: 40px;">
             <div style="display: inline-block; background-color: #8F6B84; color: #fff; padding: 10px 25px; border-radius: 30px; font-size: 12px; font-weight: 600; letter-spacing: 2px; margin-bottom: 20px;">
-                LIST VIEW ENHANCEMENT FOR ODOO 19
+                LIST VIEW ENHANCEMENT FOR ODOO 20
             </div>
             <h1 style="color: #fff; font-size: 42px; font-weight: 800; margin: 0 0 20px;">List View Merge Header</h1>
             <p style="color: #fff; font-size: 18px; max-width: 750px; margin: 0 auto 30px; line-height: 1.6;">
-                Add <strong>Excel-like merged column headers</strong> to any Odoo 19 list/tree view.
+                Add <strong>Excel-like merged column headers</strong> to any Odoo 20 list/tree view.
                 Group related columns under a shared label using a simple <code style="background-color: #8F6B84; color: #FFFFFF; padding: 2px 8px; border-radius: 4px;">&lt;merge&gt;</code> XML tag —
                 <strong>no JavaScript configuration, no Python hacks</strong>, just clean XML.
             </p>
@@ -67,9 +67,9 @@
                 </td>
                 <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
                     <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">⚡</div>
-                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">OWL Patch — Zero Overhead</h5>
+                    <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">Owl 3 Integration</h5>
                     <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
-                        Uses Odoo 19's OWL patch() API to extend ListArchParser and ListRenderer.
+                        Uses Odoo 20's OWL patch() API to extend ListArchParser and ListRenderer.
                         Views without &lt;merge&gt; tags render the original single-row header unchanged.
                     </p>
                 </td>
@@ -79,8 +79,7 @@
                     <div style="width: 50px; height: 50px; background-color: #8F6B84; border-radius: 12px; text-align: center; line-height: 50px; font-size: 24px; margin-bottom: 15px;">🔀</div>
                     <h5 style="font-weight: 700; font-size: 16px; margin: 0 0 10px; color: #fff;">Mixed Columns Support</h5>
                     <p style="color: #ddd; font-size: 13px; margin: 0; line-height: 1.5;">
-                        Mix merged and non-merged columns freely in the same list view. Non-merged columns automatically get
-                        rowspan="2" so they align perfectly with the two-row layout.
+                        Mix merged and non-merged columns freely in the same list view. All field headers retain native sorting and resizing beneath the group labels.
                     </p>
                 </td>
                 <td style="width: 33%; background-color: #714B67; border-radius: 16px; padding: 25px; vertical-align: top;">
@@ -105,7 +104,7 @@
         <!-- Screenshot Section -->
         <div style="text-align: center; margin-bottom: 40px;">
             <h2 style="font-size: 32px; font-weight: 700; margin: 0 0 12px;">See It <span style="color: #714B67;">In Action</span></h2>
-            <p style="color: #6c757d; font-size: 16px;">Real screenshot from a live Odoo 19 instance.</p>
+            <p style="color: #6c757d; font-size: 16px;">Real screenshot from a live Odoo 20 instance.</p>
         </div>
 
         <!-- Screenshot 1 -->
@@ -115,8 +114,7 @@
                 Merged Headers <span style="color: #714B67;">In a List View</span>
             </h4>
             <p style="color: #6c757d; max-width: 650px; margin: 0 auto 20px; font-size: 15px;">
-                Columns are grouped under a shared merge label in the first header row. Non-merged columns
-                span both rows automatically with <strong>rowspan="2"</strong>. Individual field headers with
+                Columns are grouped under a shared merge label in the first header row. Merged and standalone field headers retain native controls. Individual field headers with
                 full sort functionality appear in the second row.
             </p>
             <div style="background-color: #f8f9fa; border-radius: 12px; padding: 15px; border: 1px solid #e9ecef;">
@@ -163,7 +161,7 @@
         <!-- Technical Architecture -->
         <div style="text-align: center; margin-bottom: 30px;">
             <h2 style="font-size: 32px; font-weight: 700; margin: 0 0 12px;">Technical <span style="color: #714B67;">Architecture</span></h2>
-            <p style="color: #6c757d; font-size: 16px; max-width: 700px; margin: 0 auto;">Clean, minimal implementation following Odoo 19 best practices.</p>
+            <p style="color: #6c757d; font-size: 16px; max-width: 700px; margin: 0 auto;">Clean, minimal implementation following Odoo 20 best practices.</p>
         </div>
 
         <table style="width: 100%; border-collapse: separate; border-spacing: 15px; margin-bottom: 50px;">
@@ -218,7 +216,7 @@
                     <tr>
                         <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: left;">Feature</th>
                         <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: center; width: 160px;">With This Module</th>
-                        <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: center; width: 160px;">Stock Odoo 19</th>
+                        <th style="background-color: #2d3136; color: #fff; padding: 16px; font-weight: 600; text-align: center; width: 160px;">Stock Odoo 20</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -339,12 +337,12 @@
         <!-- Version Footer -->
         <div style="text-align: center; padding: 20px 0;">
             <p style="color: #6c757d; margin: 0 0 5px; font-size: 13px;">
-                <strong style="color: #212529;">Version:</strong> 19.0.1.0.0 |
+                <strong style="color: #212529;">Version:</strong> 20.0.1.0.0 |
                 <strong style="color: #212529;">License:</strong> LGPL-3 |
                 <strong style="color: #212529;">Author:</strong> Tuan Nguyen Van
             </p>
             <p style="color: #adb5bd; font-size: 12px; margin: 0;">
-                Compatible with Odoo 19 Community, Enterprise, and Odoo.sh
+                Compatible with Odoo 20 Community, Enterprise, and Odoo.sh
             </p>
             <p style="color: #adb5bd; font-size: 12px; margin: 4px 0 0;">
                 &copy; 2026 Tuan Nguyen Van. All rights reserved.

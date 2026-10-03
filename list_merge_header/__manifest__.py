@@ -9,10 +9,11 @@
     'author': 'Tuan Nguyen Van',
     'website': 'nguyentuann1004@gmail.com',
     'category': 'Extra Tools',
-    'version': '19.0.1.0.0',
+    'version': '20.0.1.0.0',
     'sequence': -100,
     'depends': ['web'],
     'assets': {
+        'web.assets_unit_tests': ['list_merge_header/static/tests/**/*.test.js'],
         'web.assets_backend': [
             'list_merge_header/static/src/scss/list_merge_header.scss',
             'list_merge_header/static/src/xml/list_merge_header.xml',
